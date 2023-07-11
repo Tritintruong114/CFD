@@ -6,6 +6,9 @@ html {
   --white-cl: #ffff;
   --time-transition: 0.4s;
   --height-header: 80px;
+  --fs-h1: 62px;
+  --fs-h2: 40px;
+  --fs-h3: 25px;
 }
 body {
   width: 100%;
@@ -22,6 +25,7 @@ body {
   padding-right: 15px;
   position: relative;
 }
+
 img {
   max-width: 100%;
 }
@@ -50,14 +54,98 @@ img {
   color: var(--blue-cl);
   padding: 12px 16px;
 }
+
 .header__logo a {
   height: 100%;
   display: flex;
-  align-items: center;
-}
-.header .container .header__menu li a:hover {
-  color: var(--yellow-cl);
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
   -o-transition: var(--time-transition);
+  align-items: center;
+}
+
+.header .container .header__menu li a:hover {
+  color: var(--yellow-cl);
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+.header__buttons .btn {
+  background: none;
+}
+.header__buttons .btn:hover {
+  background: none;
+  color: var(--yellow-cl);
+}
+
+.header__buttons a {
+  line-height: normal;
+  text-decoration: none;
+  height: 40px;
+  color: var(--blue-cl);
+  border-radius: 5px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--yellow-cl);
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
+}
+
+.header__buttons a:hover {
+  background: var(--yellow-hover-cl);
+}
+
+.shero {
+  height: 700px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.shero .container {
+  z-index: 2;
+}
+
+.shero-img {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.shero .heading {
+  font-size: var(--fs-h1);
+  font-weight: bold;
+  color: var(--blue-cl);
+  line-height: 78px;
+  font-family: mb;
+  letter-spacing: -0.4px;
+}
+
+.shero .form-search {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  position: relative;
+}
+.shero .form-search .icon-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shero .form-search .search-input {
+  height: 100%;
+  width: 366px;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  font-family: mr;
+  color: var(--blue-light-cl);
+  padding-left: 55px;
+  font-size: 15px;
 }

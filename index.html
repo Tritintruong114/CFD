@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
   </head>
+
   <body>
     <!-- Header-Start -->
     <header class="header">
@@ -59,7 +60,7 @@
         </ul>
         <div class="header__buttons">
           <a class="btn" href="#">Join Us</a>
-          <a class="btn btn-yellow" href="#">Getting Started</a>
+          <a class="btn-yellow" href="#">Getting Started</a>
         </div>
       </div>
     </header>
@@ -69,15 +70,17 @@
     <main class="main">
       <!-- Section-Hero-Start -->
       <section class="shero">
-        <div class="shero-container">
+        <div class="container">
           <div class="shero-search">
-            <h1>Find Your New Modern Aparment</h1>
+            <h1 class="heading">
+              Find Your New <br />
+              Modern Aparment
+            </h1>
             <form class="form-search">
-              <img srcset="./img/icon-search.png 2x" />
-              <div>
-                <input placeholder="Search locations" />
-              </div>
-              <a href="#" class="btn btn-yellow">Seach</a>
+              <img class="icon-search" srcset="./img/icon-search.png 2x" />
+
+              <input class="search-input" placeholder="Search locations" />
+              <a href="#" class="btn-search">Seach</a>
             </form>
           </div>
           <div class="shero-contacts">
@@ -92,12 +95,19 @@
               </p>
               <p class="link-contact">
                 <img srcset="./img/icon-location.png 2x" />
-                <a href="map">Melbourne,Australia</a>
+                <a target="_blank" href="map">Melbourne,Australia</a>
               </p>
             </div>
           </div>
-          <div></div>
         </div>
+        <picture class="shero-img">
+          <source
+            media="(max-width:992px)"
+            srcset="./img/img-hero-banner.jpg"
+          />
+
+          <img src="./img/img-hero-banner.jpg" alt="Flowers" />
+        </picture>
       </section>
       <!-- Section-Hero-End -->
 
