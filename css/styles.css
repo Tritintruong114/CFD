@@ -36,8 +36,28 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-
-.header .container .header__menu {
+.header .header__menu {
   display: flex;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header .header__menu li a {
+  text-decoration: none;
+  line-height: normal;
+  color: var(--blue-cl);
+  padding: 12px 16px;
+}
+.header__logo a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .container .header__menu li a:hover {
+  color: var(--yellow-cl);
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
 }
