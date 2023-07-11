@@ -1,0 +1,43 @@
+html {
+  --blue-cl: #1f373d;
+  --blue-light-cl: #919eb1;
+  --yellow-cl: #ffcc01;
+  --yellow-hover-cl: #ffe16a;
+  --white-cl: #ffff;
+  --time-transition: 0.4s;
+  --height-header: 80px;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 30px;
+  font-family: mr;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+img {
+  max-width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: var(--height-header);
+}
+.header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container .header__menu {
+  display: flex;
+  align-items: center;
+}
