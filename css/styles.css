@@ -100,15 +100,18 @@ img {
   background: var(--yellow-hover-cl);
 }
 
+/* Section Hero */
 .shero {
-  height: 700px;
+  height: calc(100vh - var(--height-header));
   overflow: hidden;
   width: 100%;
   position: relative;
+  min-height: 600px;
 }
 
 .shero .container {
   z-index: 2;
+  height: 100%;
 }
 
 .shero-img {
@@ -116,6 +119,8 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .shero .heading {
@@ -125,6 +130,7 @@ img {
   line-height: 78px;
   font-family: mb;
   letter-spacing: -0.4px;
+  margin-bottom: 41px;
 }
 
 .shero .form-search {
@@ -133,19 +139,175 @@ img {
   align-items: center;
   position: relative;
 }
+.shero-search {
+  padding-top: 133px;
+}
 .shero .form-search .icon-search {
   position: absolute;
   top: 50%;
+  left: 27px;
   transform: translateY(-50%);
 }
 .shero .form-search .search-input {
   height: 100%;
   width: 366px;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   outline: 0;
   border: 0;
   font-family: mr;
   color: var(--blue-light-cl);
   padding-left: 55px;
   font-size: 15px;
+}
+
+.shero .btn-search {
+  text-decoration: none;
+  background: var(--yellow-cl);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 35px;
+  font-size: 15px;
+  color: var(--blue-cl);
+  font-family: msb;
+  cursor: pointer;
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
+}
+
+.shero .btn-search:hover {
+  background: var(--yellow-hover-cl);
+}
+
+.shero-contacts-right {
+  position: absolute;
+  left: 0;
+  left: -18px;
+  bottom: 137px;
+  transform: rotate(-90deg);
+}
+.shero-contacts .shero-contacts-right img {
+  display: flex;
+  transform: rotate(90deg);
+  margin: 0;
+  left: -35px;
+  position: absolute;
+}
+
+.shero-img img {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.scrolldown {
+  color: #818181;
+}
+
+.shero .shero-contacts-left {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  max-width: 589px;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background: var(--yellow-cl);
+  padding-left: 33px;
+}
+
+.shero .shero-contacts-left .link-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.shero .shero-contacts-left .link-contact img {
+  display: flex;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.shero .shero-contacts-left .link-contact:first-child {
+  padding-right: 33px;
+}
+.shero .shero-contacts-left .link-contact:last-child {
+  padding-left: 33px;
+}
+
+.shero .shero-contacts-left .link-contact a {
+  text-decoration: none;
+  height: 100%;
+  font-size: 18px;
+  color: var(--blue-cl);
+  font-family: msb;
+}
+
+.shero .shero-contacts-left .link-contact a:hover {
+  opacity: 0.6;
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
+}
+
+.scompany {
+  height: 578px;
+  width: 100%;
+  position: relative;
+}
+
+.scompany .container {
+  height: 578px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scompany .content {
+  width: 667px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-right: 137px;
+}
+
+.scompany .boxs .box {
+  background-color: #f6f5f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scompany .boxs {
+  padding-top: 72px;
+  width: 445px;
+  height: 100%;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+.scompany .h2 {
+  color: #1f373d;
+  font-family: mb;
+  font-size: 36px;
+  width: 314px;
+  line-height: 40px;
+  padding-bottom: 51px;
+}
+
+.des-box {
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
