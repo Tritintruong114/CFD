@@ -10,6 +10,8 @@ html {
   --fs-h1: 62px;
   --fs-h2: 40px;
   --fs-h3: 25px;
+  --max-width-container: 1140px;
+  --padding-container: calc((100vw - var(--max-width-container) - 50px) / 2);
 }
 body {
   width: 100%;
@@ -20,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: var(--max-width-container);
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -371,6 +373,20 @@ img {
   padding-left: 24px;
   padding-bottom: 41px;
 }
+.sapartments .img {
+  width: 100%;
+}
+.sapartments .img a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.sapartments .img a img {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
 .sapartments .apartments-container .infobox {
   display: flex;
   width: 100%;
@@ -468,7 +484,7 @@ img {
 .showitworks .howitwork-container .des {
   font-size: 13px;
   font-family: mr;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .showitworks .howitwork-container .link {
@@ -577,6 +593,7 @@ img {
   display: flex;
   flex-direction: column;
   padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .sultis .ulti-information {
@@ -612,6 +629,7 @@ img {
   padding: 20px 40px;
   position: absolute;
   bottom: 10px;
+
   left: 30px;
   cursor: pointer;
   transition: var(--time-transition);
@@ -682,12 +700,14 @@ img {
 .sultis .ulti-information2 .city-container:hover {
   background: var(--yellow-hover-cl);
 }
+
 .sultis .ulti-information2 .city-container a {
   text-decoration: none;
   font-family: mb;
   font-size: 18px;
   color: #1f373d;
 }
+
 .sultis .ulti-information .btn-dark-green {
   background: #1f373d;
   color: var(--white-cl);
@@ -700,6 +720,7 @@ img {
   --webkit-transition: var(--time-transition);
   -o-transition: var(--time-transition);
 }
+
 .sultis .ulti-information .btn-dark-green:hover {
   background: var(--yellow-cl);
   color: #1f373d;
@@ -711,10 +732,10 @@ img {
 }
 
 .sgetintouch {
+  background: #f6f5f4;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 1000px;
+  padding-left: 15px;
+  height: fit-content;
 }
 .sgetintouch .textbox {
   width: 335px;
@@ -728,16 +749,11 @@ img {
   padding-bottom: 30px;
   padding-top: 35px;
 }
-.getintouch-right {
-  width: fit-content;
-}
-.getintouch-right img {
-  width: 840px;
-}
 
 .sgetintouch .getintouch-left {
-  padding-left: 325px;
-  width: 443px;
+  width: 631px;
+  padding-left: var(--padding-container);
+  padding-top: 92px;
 }
 .sgetintouch .form-container .inputs-group {
   display: flex;
@@ -747,10 +763,22 @@ img {
 .sgetintouch .form-container {
   display: flex;
   flex-direction: column;
+  width: 442px;
 }
 .sgetintouch .form-container input {
   font-family: inherit;
   width: 100%;
+  border: 0;
+  border-bottom: 2px solid #1f373d;
+  outline: 0;
+  opacity: 0.6;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.sgetintouch .form-container select {
+  font-family: inherit;
+  width: 40px;
   border: 0;
   border-bottom: 2px solid #1f373d;
   outline: 0;
@@ -770,4 +798,93 @@ img {
   background: transparent;
   transition: border-color 0.2s;
   height: 130px;
+}
+.sgetintouch .form-container .phone {
+  display: flex;
+  padding-left: 30px;
+}
+.getintouch-right {
+  flex: 1;
+}
+
+.getintouch-img {
+  height: 100%;
+  width: 100%;
+}
+
+.forminput {
+  display: flex;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: K;
+  padding-bottom: 20px;
+}
+.radio-container .h3 {
+  color: #1f373d;
+  font-family: msb;
+}
+
+.radio-container .radio-box {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  gap: 8px;
+}
+.radio-container .radio-box input {
+  margin: 0;
+}
+.radios {
+  width: 100%;
+  justify-content: start;
+  color: #1f373d;
+  gap: 80px;
+  align-items: center;
+  display: flex;
+}
+.checkboxs {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-container .radio-box {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  color: #1f373d;
+  gap: 8px;
+}
+.checkbox-container {
+  padding-bottom: 30px;
+}
+
+.sgetintouch .btn-dark-green {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue-cl);
+  color: var(--white-cl);
+  cursor: pointer;
+  height: 70px;
+  font-size: 18px;
+  font-family: msb;
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
+}
+.sgetintouch .btn-dark-green:hover {
+  background: var(--yellow-cl);
+}
+
+.radio-container .radios input {
+  accent-color: var(--blue-cl);
+}
+
+.checkbox-container .checkboxs input {
+  accent-color: var(--blue-cl);
+  margin: 0;
 }

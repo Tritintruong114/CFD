@@ -315,7 +315,7 @@
             </p>
           </div>
           <div class="howitwork-container">
-            <figure class="work-info">
+            <figure class="work-info --active">
               <h1 class="heading h1">01</h1>
               <h2 class="heading h2">01. Find Your Location</h2>
               <div class="howitwork-des">
@@ -570,18 +570,19 @@
           </div>
           <form class="form-container">
             <div class="inputs-group">
-              <div>
+              <div class="forminput">
                 <input placeholder="Name" type="text" />
               </div>
-              <div>
+              <div class="forminput">
                 <input placeholder="Email" type="email" />
               </div>
-              <div>
-                <input
-                  type="Tel"
-                  placeholder="VN     +84 1234 1234"
-                  type="number"
-                />
+              <div class="forminput">
+                <select>
+                  <option value="VN">VN</option>
+                  <option value="JP">JP</option>
+                  <option value="EN">EN</option>
+                </select>
+                <input class="phone" type="text" placeholder="123 123 123" />
               </div>
               <div>
                 <textarea
@@ -591,40 +592,48 @@
               </div>
             </div>
             <div class="radio-container">
-              <p class="semi-bold">Select the services :</p>
-              <div class="radio-box">
-                <input type="radio" id="Renting" />
-                <label for="Renting">Renting</label>
+              <div>
+                <p class="h3">Select the services :</p>
               </div>
-              <div class="radio-box">
-                <input type="radio" id="Selling" />
-                <label for="Selling">Selling</label>
-              </div>
-              <div class="radio-box">
-                <input type="radio" id="Building" />
-                <label for="Building">Building</label>
+              <div class="radios">
+                <div class="radio-box">
+                  <input type="radio" id="Renting" />
+                  <label for="Renting">Renting</label>
+                </div>
+                <div class="radio-box">
+                  <input type="radio" id="Selling" />
+                  <label for="Selling">Selling</label>
+                </div>
+                <div class="radio-box">
+                  <input type="radio" id="Building" />
+                  <label for="Building">Building</label>
+                </div>
               </div>
             </div>
             <div class="checkbox-container">
-              <p class="semi-bold">Which channel you want to connect?</p>
-              <div class="radio-box">
-                <input type="checkbox" id="Facebook" />
-                <label for="Facebook">Facebook</label>
+              <div>
+                <p class="h3">Which channel you want to connect?</p>
               </div>
-              <div class="radio-box">
-                <input type="checkbox" id="Email" />
-                <label for="Email">Email</label>
-              </div>
-              <div class="radio-box">
-                <input type="checkbox" id="Phone" />
-                <label for="Phone">Phone</label>
+              <div class="checkboxs">
+                <div class="radio-box">
+                  <input type="checkbox" id="Facebook" />
+                  <label for="Facebook">Facebook</label>
+                </div>
+                <div class="radio-box">
+                  <input type="checkbox" id="Email" />
+                  <label for="Email">Email</label>
+                </div>
+                <div class="radio-box">
+                  <input type="checkbox" id="Phone" />
+                  <label for="Phone">Phone</label>
+                </div>
               </div>
             </div>
-            <a href="#" class="btn btn-dark-green">Send Us</a>
+            <p href="#" class="btn btn-dark-green">Send Us</p>
           </form>
         </div>
         <div class="getintouch-right">
-          <img src="./img/img-contact.jpg" />
+          <img class="getintouch-img" src="./img/img-contact.jpg" />
         </div>
       </section>
       <!-- Section-GetInTouch-End -->
