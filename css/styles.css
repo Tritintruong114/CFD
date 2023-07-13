@@ -400,6 +400,7 @@ img {
   justify-content: center;
   text-decoration: none;
   background: var(--white-cl);
+  color: #1f373d;
 }
 .sapartments .bottom a:hover {
   background: var(--yellow-hover-cl);
