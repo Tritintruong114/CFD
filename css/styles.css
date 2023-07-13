@@ -709,3 +709,65 @@ img {
   width: 545px;
   height: 331px;
 }
+
+.sgetintouch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1000px;
+}
+.sgetintouch .textbox {
+  width: 335px;
+  color: #1f373d;
+}
+.sgetintouch .textbox .h2 {
+  font-size: 40px;
+  font-family: mb;
+}
+.sgetintouch .textbox .des {
+  padding-bottom: 30px;
+  padding-top: 35px;
+}
+.getintouch-right {
+  width: fit-content;
+}
+.getintouch-right img {
+  width: 840px;
+}
+
+.sgetintouch .getintouch-left {
+  padding-left: 325px;
+  width: 443px;
+}
+.sgetintouch .form-container .inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.sgetintouch .form-container {
+  display: flex;
+  flex-direction: column;
+}
+.sgetintouch .form-container input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #1f373d;
+  outline: 0;
+  opacity: 0.6;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.text-area {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #1f373d;
+  outline: 0;
+  opacity: 0.6;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  height: 130px;
+}
