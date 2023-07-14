@@ -563,6 +563,7 @@ img {
   background-color: var(--white-cl);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
+  padding-bottom: 20px;
 }
 
 .sagents .agent-info {
