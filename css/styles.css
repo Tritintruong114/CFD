@@ -36,9 +36,8 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: 44px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  font-size: 15px;
+  padding-top: 10px;
 }
 .appartment-infobox .h3:hover {
   opacity: 0.6;
