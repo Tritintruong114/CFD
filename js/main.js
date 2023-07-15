@@ -1,84 +1,101 @@
-//JS Part 1.1
+// 1. Tạo 1 mảng gồm tên các khoá học của CFD Circle. In ra số lượng các khoá học? In ra chỉ số
+// index của mảng? In ra tên khoá học ở vị trí index thứ 2. In ra chuỗi tên các khoá học cách
+// nhau bằng dấu phẩy? Tính tổng giá các khoá học? (bắt buộc dùng 1 trong những Phương
+// thức xử lý mảng nâng cao đã học)
 
-//BT1
-//Nhập vào 1 số bất kỳ, kiểm tra số đó có phải là số chẵn hay không? Kết quả trả về kiểu true/false
-const checkEven = (number) => {
-  return number % 2 == 0 ? true : false;
+const courses = [
+  { name: "FE newbie", price: 5000000 },
+  { name: "FE Responsive", price: 4000000 },
+  { name: "ReactJS Master", price: 6000000 },
+  { name: "ReactJS Advantage", price: 6000000 },
+  { name: "Typescript and ReactJS", price: 7000000 },
+];
+
+// In số lượng khóa học.
+const totalCourse = courses.length;
+console.log(totalCourse);
+
+//In ra chuỗi tên các khoá học cách
+// nhau bằng dấu phẩy?
+const courseName = courses.map((course) => {
+  return course.name;
+});
+console.log(courseName);
+// In ra tên khoá học ở vị trí index thứ 2.
+console.log(courses[2].name);
+
+//Tính tổng giá các khoá học? (bắt buộc dùng 1 trong những Phương
+// thức xử lý mảng nâng cao đã học)
+const sumPrice = (courses, key) => {
+  const total = courses.reduce((accumulator, course) => {
+    return accumulator + course[key];
+  }, 0);
+
+  return `Total ${key} : ${total.toLocaleString("en-Us")}`;
 };
-console.log(checkEven(12), `BT1`);
 
-//BT2
-//Viết hàm kiểm tra số đó có chia hết cho 3 hay không?
-const checkOdd = (number) => {
-  return number % 3 === 0 ? true : false;
+//Input  with array and key
+const result1 = sumPrice(courses, "price");
+console.log(result1);
+
+//2.Viết 1 hàm nhận vào 1 mảng số và trả về tổng giá trị các phần tử của mảng?
+
+const length = (array) => {
+  return `Total: ${array.length} objects`;
 };
-console.log(checkOdd(9), `BT2`);
+console.log(length(courses));
 
-//BT3 Khai báo 2 số a = 4, b = 12, in kết quả bằng console.: Tính tổng 2 số a và b? Lấy b chia a, lấy phần dư? Lấy b chia a, lấy phần nguyên?
-let a = 4;
-let b = 12;
-const sumAB = (num1, num2) => {
-  return num1 + num2;
+//3. Viết 1 hàm nhận vào 2 tham số là array và character. Hàm trả về 1 chuỗi là kết quả của việc
+// nối các phần tử của array với character? (lưu ý: array là mảng nhận vào, character là ký tự để
+// nối các phần tử của mảng).
+
+let newCourse = { name: "Typescript Indepth", price: 5000000 };
+
+const addItem = (name, price) => {
+  let Fixprice = price.toLocaleString("en-Us");
+
+  let newCourse = { name, Fixprice };
+  const newArray = [...courses, newCourse];
+  console.log(newArray);
 };
-console.log(sumAB(a, b), "BT3 Tổng");
 
-const balanceAB = (num1, num2) => {
-  return num2 % num1;
+addItem("UI & UX", 6000000);
+
+// 4.Tạo 1 mảng chứa các object có thuộc tính là tên các nhân viên và giá trị là tiền lương. Viết hàm
+// trả về tổng tất cả lương của các nhân viên trong object?
+const staff = [
+  { name: "Kiet", salary: 20000000 },
+  { name: "Huong", salary: 15000000 },
+  { name: "Hai", salary: 14000000 },
+];
+const result2 = sumPrice(staff, "salary");
+console.log(result2);
+
+//5.Cho mảng gồm các phần tử 2,4,5,7,32,67,30,100. Tìm và in ra phần tử đầu tiên thoả điều kiện phần
+// tử đó > 20?
+
+const numbers = [2, 4, 5, 6, 32, 67, 30, 100];
+
+const isItBiggerThan = (number) => {
+  let num = numbers.find((num) => num > number);
+  console.log(num);
 };
-console.log(balanceAB(a, b), "BT3 Phần dư");
 
-const divideAB = (num1, num2) => {
-  return num2 / num1;
-};
-console.log(divideAB(a, b), "BT3 Phần nguyên");
+isItBiggerThan(5);
+isItBiggerThan(30);
+isItBiggerThan(63);
 
-//BT4
-//In ra họ và tên của mình bằng cách khai báo 1 biến chứa họ và biến chứa tên, có
-// khoảng trắng giữa họ và tên của bạn.
-let firstName = "Tín";
-let lastName = "Trương";
-const userName = () => {
-  return `Hello ${firstName} ${lastName}`;
-};
-console.log(userName(), "BT4");
+//6.Cho mảng diemso gồm các phần tử 5, 7, 8, 9, 3. Sử dụng hàm every để kiểm tra điểm số của học
+// sinh được lưu dưới dạng mảng có đủ để đỗ kỳ thì không. Điều kiện tất cả điểm số >= 5. Nếu đủ
+// điều kiện thì in ra “Đủ điểm đỗ” ngược lại thì “Không đủ điểm đỗ”?
 
-//BT5
-//Viết hàm so sánh 2 số nguyên. nếu a > b thì trả về 1, nếu a < b thì trả về -1, nếu a == b thì
-// trả về 0.
-const checkAB = (a, b) => {
-  if (a > b) {
-    return 1;
+const scores = [5, 7, 8, 9, 3];
+
+const checkIsPass = (array) => {
+  if (array.every >= 5) {
+    console.log(`Passed`);
   }
-  return a < b ? -1 : 0;
-};
-console.log(checkAB(10, 2), "BT5");
-
-//BT6
-// Khai báo một chuỗi ký tự là “happy news year”
-// a. In ra tổng số ký tự có trong chuỗi (gợi ý dùng length)
-// b. In ra vị trí của chữ “y” từ đầu xuống (gợi ý dùng indexOf)
-// c. In ra vị trí của chữ “y” từ dưới lên (gợi ý dùng lastIndexOf)
-// d. Dùng replace để thay thế từ “happy” bằng một từ tuỳ ý bạn.
-let hpny = "happy news year";
-const hpnyAction = (string) => {
-  console.log(string.length);
-  console.log(string.indexOf("y"));
-  console.log(string.lastIndexOf("y"));
-  console.log(string.replace("happy", "Every"));
-};
-hpnyAction(hpny, "BT6");
-
-//BT7
-// Viết hàm nhập vào điểm của một học sinh và in ra kết quả tương ứng nếu:
-// a. Điểm lớn hơn 8 thì in ra Excellence -
-// b. Điểm lớn hơn 7 đến 8 thì in ra Good
-// c. Điểm từ 4 đến bằng 7 thì in ra Not Good
-// d. Nhỏ hơn 4 thì in ra Bad
-
-const studentResult = (score) => {
-  if (score > 8) {
-    return "Excellence";
-  }
+  console.log(`Not pass because have score below 5`);
 };
 
-console.log(studentResult(10), "BT7");
+checkIsPass(scores);
