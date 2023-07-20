@@ -75,6 +75,9 @@ img {
   line-height: normal;
   color: var(--blue-cl);
   padding: 12px 16px;
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
 }
 
 .header__logo a {
@@ -178,7 +181,8 @@ img {
   outline: 0;
   border: 0;
   font-family: mr;
-  color: var(--blue-light-cl);
+  /* color: var(--blue-light-cl); */
+  font-family: msb;
   padding-left: 55px;
   font-size: 15px;
 }
@@ -196,6 +200,7 @@ img {
   font-size: 15px;
   color: var(--blue-cl);
   font-family: msb;
+  border: none;
   cursor: pointer;
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
@@ -464,79 +469,111 @@ img {
   padding-top: 87px;
 }
 
-.showitworks .textbox .des {
-  color: #1f373d;
-  width: 360px;
-  padding-top: 24px;
-}
 .showitworks .howitwork-container {
-  height: 550px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-left: -15px;
+  margin-right: -15px;
 }
 .showitworks .howitwork-container .work-info {
-  height: fit-content;
   background: var(--white-cl);
   cursor: pointer;
-  width: 352px;
+  width: calc(100% / 3 - 30px);
   color: #1f373d;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 42px 90px 47px 42px;
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
 }
 .showitworks .howitwork-container .work-info:hover {
   background: var(--yellow-cl);
   color: var(--white-cl);
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
+}
+.showitworks .howitwork-container .work-info:hover .link::after {
+  background: var(--white-cl);
 }
 .showitworks .howitwork-container .work-info:hover .link {
-  border-bottom: var(--white-cl) solid;
+  color: var(--white-cl);
 }
-.showitworks .howitwork-container .h1 {
+
+.showitworks .howitwork-container .active .link {
+  color: var(--white-cl);
+}
+
+.showitworks .howitwork-container .howitwork-des {
+  margin-left: 28px;
+}
+.showitworks .howitwork-container .howitwork-des .link {
+  font-family: msb;
+}
+
+.showitworks .howitwork-container .howitwork-des .link:after {
+  width: 100%;
+  content: "";
+  height: 2px;
+  background: var(--blue-cl);
+  display: block;
+  margin-top: 4px;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: var(--time-transition) transform;
+  --webkit-transition: var(--time-transition) transform;
+  -o-transition: var(--time-transition) transform;
+}
+.showitworks .howitwork-container .howitwork-des .link:hover:after {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: var(--time-transition) transform;
+}
+.showitworks .howitwork-container .active {
+  background: var(--yellow-cl);
+  color: var(--white-cl);
+}
+.showitworks .howitwork-container .active .link::after {
+  background: var(--white-cl);
+}
+.showitworks .howitwork-container h1 {
   font-size: 100px;
+  line-height: 68px;
   font-family: mb;
-  padding-left: 36px;
-  padding-top: 60px;
 }
-.showitworks .howitwork-container .h2 {
+
+.h2 {
   font-size: 18px;
   font-family: mb;
-  padding-left: 42px;
-  padding-top: 55px;
 }
-.showitworks .howitwork-container .howitwork-des {
-  width: 213px;
-  padding-left: 72px;
-  padding-bottom: 70px;
-}
+
 .showitworks .howitwork-container .des {
   font-size: 13px;
   font-family: mr;
-  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .showitworks .howitwork-container .link {
   width: fit-content;
-  padding-top: 10px;
-  border-bottom: #1f373d solid;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--blue-cl);
   font-family: mb;
   pointer-events: inherit;
 }
-.sservices .textbox .h2 {
-  padding-top: 0;
-}
+
 .sservices .textbox .des {
   width: 366px;
-  padding-top: 20px;
+  color: #1f373d;
+  padding-top: 24px;
+  padding-bottom: 50px;
 }
 
 .services-container {
   display: flex;
   padding-bottom: 70px;
-  padding-top: 40px;
 }
 
 .services-container .services-right {
@@ -549,7 +586,6 @@ img {
   gap: 40px;
 }
 .services-container .services-right .h2 {
-  padding-bottom: 25px;
   font-size: 25px;
   font-family: msb;
 }
@@ -574,18 +610,21 @@ img {
 }
 
 .sagents .textbox {
-  width: 360px;
-  gap: 50px;
+  width: 390px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   color: #1f373d;
+}
+.sagents .textbox .h2 {
+  margin-bottom: 35px;
 }
 .agents-container {
   gap: 30px;
 }
 .sagents .agents-container {
-  padding-top: 70px;
   padding-bottom: 70px;
+  margin-top: 58px;
 }
 .agent-infor-container {
   padding-top: 15px;
@@ -612,7 +651,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 37px;
 }
 .agent-infor-container .agent-owner {
   color: var(--yellow-cl);
@@ -633,6 +672,7 @@ img {
 .sultis .ulti-information {
   display: flex;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .sultis .ulti-information .ulti-left {
@@ -648,6 +688,9 @@ img {
   display: flex;
   gap: 30px;
   flex-direction: column;
+}
+.sultis .ulti-information .ulti-left .textbox .des {
+  margin-bottom: 20px;
 }
 .sultis .ulti-information .ulti-left .textbox .h2 {
   font-size: 25px;
@@ -773,15 +816,16 @@ img {
 }
 .sgetintouch .textbox {
   width: 335px;
-  color: #1f373d;
 }
 .sgetintouch .textbox .h2 {
   font-size: 40px;
   font-family: mb;
+  color: var(--blue-cl);
 }
 .sgetintouch .textbox .des {
   padding-bottom: 30px;
   padding-top: 35px;
+  color: var(--blue-cl);
 }
 
 .sgetintouch .getintouch-left {
@@ -803,21 +847,23 @@ img {
 .sgetintouch .form-container input {
   font-family: inherit;
   width: 100%;
+
   border: 0;
-  border-bottom: 2px solid #1f373d;
+  border-bottom: 2px solid #c0c7d0;
   outline: 0;
-  opacity: 0.6;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
 }
 .sgetintouch .form-container select {
   font-family: inherit;
-  width: 40px;
+  width: 60px;
+  font-size: 15px;
   border: 0;
-  border-bottom: 2px solid #1f373d;
-  outline: 0;
+  border-bottom: 2px solid #c0c7d0;
+
   opacity: 0.6;
+  outline: 0;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -826,14 +872,15 @@ img {
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #1f373d;
+  border-bottom: 2px solid #c0c7d0;
+
   outline: 0;
-  opacity: 0.6;
   padding: 7px 0;
   background: transparent;
-  transition: border-color 0.2s;
+
   height: 130px;
 }
+
 .sgetintouch .form-container .phone {
   display: flex;
   padding-left: 30px;
@@ -960,6 +1007,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   /* padding-right: 20px; */
 }
 .form-subscrise input {
@@ -967,12 +1015,23 @@ img {
   width: 100%;
   border: 0;
   outline: 0;
-  opacity: 0.6;
+  color: black;
   background: transparent;
   transition: border-color 0.2s;
   padding-left: 20px;
 }
+.submitBtn {
+  width: 100%;
+  width: 100%;
+  background: var(--white-cl);
+  border: none;
+  cursor: pointer;
+}
 
+.bottom-right-links {
+  display: flex;
+  flex-direction: column;
+}
 .sbottom {
   padding-top: 70px;
   display: flex;
@@ -983,14 +1042,14 @@ img {
   color: var(--white-cl);
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .sbottom .bottom-left .info-bottom {
   line-height: 20px;
+  margin-top: 65px;
 }
 .sbottom .bottom-left .info-bottom p:hover {
-  color: var(--yellow-cl);
+  /* color: var(--yellow-cl); */
   cursor: pointer;
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
@@ -1004,11 +1063,12 @@ img {
   color: var(--white-cl);
   padding-bottom: 65px;
 }
+
 .sbottom .bottom-right .bottom-right-title {
   padding-bottom: 20px;
   color: #8693a5;
 }
-.sbottom .bottom-right li:hover {
+.sbottom .bottom-right a:hover {
   color: var(--yellow-cl);
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
@@ -1023,9 +1083,7 @@ img {
   height: 100%;
   width: 100px;
 }
-.form-subscrise .icon-leffarrow:hover {
-  background: var(--yellow-cl);
-}
+
 .agent-img-container {
   display: flex;
   position: relative;
@@ -1051,4 +1109,9 @@ img {
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
   -o-transition: var(--time-transition);
+}
+
+.bottom-right-links a {
+  text-decoration: none;
+  color: var(--white-cl);
 }
