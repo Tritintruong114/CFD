@@ -10,7 +10,7 @@ html {
   --fs-h1: 62px;
   --fs-h2: 40px;
   --fs-h3: 25px;
-  --max-width-container: 1140px;
+  --max-width-container: 1111px;
   --padding-container: calc((100vw - var(--max-width-container) - 50px) / 2);
 }
 body {
@@ -182,7 +182,7 @@ img {
   border: 0;
   font-family: mr;
   /* color: var(--blue-light-cl); */
-  font-family: msb;
+  /* font-family: msb; */
   padding-left: 55px;
   font-size: 15px;
 }
@@ -354,7 +354,6 @@ img {
 }
 
 .sapartments {
-  height: 1457px;
   background: var(--grey-cl);
 }
 .sapartments .h2 {
@@ -363,19 +362,22 @@ img {
   font-size: 36px;
   width: 458px;
   line-height: 40px;
-  padding-bottom: 58px;
+  padding-bottom: 42px;
   padding-top: 76px;
   padding-left: 6px;
 }
 .sapartments .apartments-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 .sapartments .apartments-container .appartment-container {
   background: var(--white-cl);
-  width: fit-content;
+  width: 350px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
 
 .h3 {
@@ -442,7 +444,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 192px;
+  margin-top: 35px;
 }
 .sapartments .bottom a {
   height: 72px;
@@ -460,20 +462,35 @@ img {
   transition: 0.1s;
   transition-timing-function: ease-in-out;
 }
+.showitworks .textbox {
+  margin-top: 70px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.sservices .textbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 89px;
+  gap: 0px;
+}
 .showitworks .textbox .h2 {
   color: #1f373d;
   font-family: mb;
   font-size: 36px;
   width: 458px;
   line-height: 40px;
-  padding-top: 87px;
 }
-
+.sapartments .container {
+  padding-bottom: 75px;
+}
 .showitworks .howitwork-container {
   display: flex;
   /* flex-wrap: wrap; */
   margin-left: -15px;
   margin-right: -15px;
+  margin-top: 60px;
+  gap: 5px;
 }
 .showitworks .howitwork-container .work-info {
   background: var(--white-cl);
@@ -483,7 +500,7 @@ img {
   margin-left: 15px;
   margin-right: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 42px 90px 47px 42px;
+  padding: 42px 50px 47px 42px;
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
   -o-transition: var(--time-transition);
@@ -531,6 +548,9 @@ img {
   transform-origin: right;
   transition: var(--time-transition) transform;
 }
+.showitworks .container .textbox {
+  width: 390px;
+}
 .showitworks .howitwork-container .active {
   background: var(--yellow-cl);
   color: var(--white-cl);
@@ -542,17 +562,22 @@ img {
   font-size: 100px;
   line-height: 68px;
   font-family: mb;
+  margin-bottom: 25px;
 }
-
 .h2 {
   font-size: 18px;
   font-family: mb;
+}
+.showitworks .howitwork-container .h2 {
+  font-size: 18px;
+  font-family: mb;
+  margin-bottom: 20px;
 }
 
 .showitworks .howitwork-container .des {
   font-size: 13px;
   font-family: mr;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .showitworks .howitwork-container .link {
@@ -565,7 +590,7 @@ img {
 }
 
 .sservices .textbox .des {
-  width: 366px;
+  width: 404px;
   color: #1f373d;
   padding-top: 24px;
   padding-bottom: 50px;
@@ -602,7 +627,7 @@ img {
 .sagents .h2 {
   font-size: 40px;
   font-family: mb;
-  padding-top: 81px;
+  padding-top: 78px;
 }
 
 .sagents .agents-container {
@@ -651,7 +676,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 37px;
+  gap: 28px;
 }
 .agent-infor-container .agent-owner {
   color: var(--yellow-cl);
@@ -674,20 +699,23 @@ img {
   position: relative;
   margin-bottom: 50px;
 }
-
+.sultis .ulti-information .ulti-right {
+  margin-right: 33px;
+}
 .sultis .ulti-information .ulti-left {
   width: 546px;
   height: 365px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 120px;
+  /* padding-left: 100px; */
   color: #1f373d;
 }
 .sultis .ulti-information .ulti-left .textbox {
   display: flex;
   gap: 30px;
   flex-direction: column;
+  padding-left: 90px;
 }
 .sultis .ulti-information .ulti-left .textbox .des {
   margin-bottom: 20px;
@@ -714,6 +742,10 @@ img {
   -o-transition: var(--time-transition);
 }
 
+.city-container img {
+  height: 27px;
+}
+
 .sultis .ulti-information .city-container:hover {
   background: var(--yellow-hover-cl);
 }
@@ -730,6 +762,8 @@ img {
 .sultis .ulti-information2 {
   display: flex;
   position: relative;
+  justify-content: space-between;
+  margin-bottom: 64px;
 }
 
 .sultis .ulti-information2 .ulti-left {
@@ -747,7 +781,7 @@ img {
   width: 450px;
   font-size: 13px;
   flex-direction: column;
-  padding-right: 125px;
+  padding-right: 102px;
   font-family: mr;
 }
 .sultis .ulti-information2 .ulti-left .textbox .h2 {
@@ -767,7 +801,7 @@ img {
   padding: 20px 40px;
   position: absolute;
   bottom: 10px;
-  right: 80px;
+  right: 35px;
   cursor: pointer;
   transition: var(--time-transition);
   --webkit-transition: var(--time-transition);
@@ -815,7 +849,7 @@ img {
   height: fit-content;
 }
 .sgetintouch .textbox {
-  width: 335px;
+  width: 387px;
 }
 .sgetintouch .textbox .h2 {
   font-size: 40px;
@@ -829,7 +863,7 @@ img {
 }
 
 .sgetintouch .getintouch-left {
-  width: 631px;
+  width: 661px;
   padding-left: var(--padding-container);
   padding-top: 92px;
 }
@@ -1010,6 +1044,11 @@ img {
 
   /* padding-right: 20px; */
 }
+.service-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 .form-subscrise input {
   font-family: inherit;
   width: 100%;
@@ -1044,6 +1083,9 @@ img {
   flex-direction: column;
 }
 
+.sbottom .bottom-left img {
+  width: 111px;
+}
 .sbottom .bottom-left .info-bottom {
   line-height: 20px;
   margin-top: 65px;
