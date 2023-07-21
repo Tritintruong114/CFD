@@ -468,10 +468,14 @@ img {
   color: #1f373d;
 }
 .sapartments .bottom a:hover {
-  background: var(--yellow-hover-cl);
+  background: var(--yellow-cl);
   color: white;
-  transition: 0.1s;
+
   transition-timing-function: ease-in-out;
+
+  transition: var(--time-transition);
+  --webkit-transition: var(--time-transition);
+  -o-transition: var(--time-transition);
 }
 .showitworks .textbox {
   margin-top: 70px;
@@ -845,7 +849,7 @@ img {
 
 .sultis .ulti-information .btn-dark-green:hover {
   background: var(--yellow-cl);
-  color: #1f373d;
+  color: var(--white-cl);
 }
 
 .location_img {
