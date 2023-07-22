@@ -10,6 +10,7 @@ html {
   --fs-h1: 62px;
   --fs-h2: 40px;
   --fs-h3: 25px;
+  scroll-behavior: smooth;
   --max-width-container: 1111px;
   --padding-container: calc((100vw - var(--max-width-container) - 50px) / 2);
 }
@@ -48,13 +49,33 @@ body {
   -o-transition: var(--time-transition);
   cursor: pointer;
 }
+
 img {
   max-width: 100%;
+}
+
+.progress-container {
+  height: 8px;
+  width: 100%;
+}
+
+.progress-container .progress-bar {
+  background: var(--yellow-cl);
+  display: block;
+  height: 100%;
+  width: 0%;
 }
 
 .header {
   width: 100%;
   height: var(--height-header);
+  position: fixed;
+  z-index: 3;
+  background: var(--white-cl);
+  transition: 0.9s;
+}
+.header.bgGray {
+  background: rgb(186, 174, 174);
 }
 .header .container {
   height: 100%;
@@ -1173,4 +1194,16 @@ img {
 .bottom-right-links a {
   text-decoration: none;
   color: var(--white-cl);
+}
+
+.btntotop {
+  background: var(--yellow-cl);
+  height: fit-content;
+  padding: 20px 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+}
+.btntotop.showBtn {
+  opacity: 1;
 }
